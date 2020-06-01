@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "233637933264",
+    "firebase_url": "https://avasyu2.firebaseio.com",
+    "project_id": "avasyu2",
+    "storage_bucket": "avasyu2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233637933264:android:56e1c247ae763ea6716ed5",
+        "android_client_info": {
+          "package_name": "com.glau.avasyu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233637933264-18iga3c70o17om5uhrsd0eq6kd64i21q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiDzu3XCoyhcczMZ27v-yWjj2kvlN2-YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233637933264-18iga3c70o17om5uhrsd0eq6kd64i21q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngo name"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:id="@+id/payed_ngo_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payed_ref_no"
+            android:text="Ref No: 1234567890"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_below="@+id/payed_ngo_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payed_rupees"
+            android:text="₹100"
+            android:layout_alignParentRight="true"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/payed_rupees"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="done.json"
+            android:id="@+id/payed_done"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>
