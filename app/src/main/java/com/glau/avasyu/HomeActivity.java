@@ -145,6 +145,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 intent.putExtra("link", ngo_adapter.getItem(i).getOfficial_site());
                 intent.putExtra("contact", ngo_adapter.getItem(i).getContact());
                 intent.putExtra("imglink", ngo_adapter.getItem(i).getImg_link());
+                intent.putExtra("upi",ngo_adapter.getItem(i).getUpi());
 
                 startActivity(intent);
             }
@@ -171,7 +172,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 NGOModel NGOData=dataSnapshot.getValue(NGOModel.class);
 
                 assert NGOData != null;
-                NGODataArrayList.add(new NGOModel(NGOData.getName(), NGOData.getLocation(), NGOData.getImg_link(), NGOData.getDescription(), NGOData.getOfficial_site(), NGOData.getContact(), NGOData.getEst_date()));
+                NGODataArrayList.add(new NGOModel(NGOData.getName(), NGOData.getLocation(), NGOData.getImg_link(), NGOData.getDescription(), NGOData.getOfficial_site(), NGOData.getContact(), NGOData.getEst_date(),NGOData.getUpi()));
                 keys.add(dataSnapshot.getKey());
                 ngo_adapter.notifyDataSetChanged();
 

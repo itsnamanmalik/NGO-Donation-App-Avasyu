@@ -65,6 +65,7 @@ public class NgoDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),DonationActivity.class);
                 intent.putExtra("pay_ngo",ngo_name.getText().toString());
+                intent.putExtra("upi",getIntent().getExtras().getString("upi"));
                 startActivity(intent);
             }
         });

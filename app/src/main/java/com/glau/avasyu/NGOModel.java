@@ -1,11 +1,11 @@
 package com.glau.avasyu;
 
 public class NGOModel {
-    private String name, location, img_link, description, official_site, contact, est_date;
+    private String name, location, img_link, description, official_site, contact, est_date, upi;
 
 
 
-    public NGOModel(String name, String location, String img_link, String description, String official_site, String contact, String est_date) {
+    public NGOModel(String name, String location, String img_link, String description, String official_site, String contact, String est_date, String upi) {
         this.name = name;
         this.location = location;
         this.img_link = img_link;
@@ -13,6 +13,7 @@ public class NGOModel {
         this.official_site = official_site;
         this.contact = contact;
         this.est_date = est_date;
+        this.upi = upi;
     }
 
     public String getName() {
@@ -74,6 +75,11 @@ public class NGOModel {
     public NGOModel() {
     }
 
+    public String getUpi() {
+        return upi;
+    }
 
-
+    public void setUpi(String upi) {
+        this.upi = upi;
+    }
 }

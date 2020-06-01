@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DeleteNgoActivity"></activity>
         <activity android:name=".PaymentsActivity" />
         <activity android:name=".DonationActivity" />
         <activity android:name=".AddNGOActivity" />

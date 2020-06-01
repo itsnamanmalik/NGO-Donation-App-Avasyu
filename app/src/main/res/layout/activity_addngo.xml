@@ -95,6 +95,16 @@
         android:hint="NGO Est. Date"
         android:layout_below="@+id/contact_et"
         android:id="@+id/date_et"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:hint="NGO UPI ID"
+            android:layout_below="@+id/date_et"
+            android:id="@+id/upi_id"/>
     </RelativeLayout>
     </ScrollView>
     <Button

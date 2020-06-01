@@ -26,7 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddNGOActivity extends AppCompatActivity {
 
-    EditText ngo_name, ngo_location, ngo_date, ngo_desc, ngo_link, contact_details,img_link;
+    EditText ngo_name, ngo_location, ngo_date, ngo_desc, ngo_link, contact_details,img_link,upi_id;
     Button add_btn;
     ProgressBar progressDialog;
 
@@ -48,6 +48,7 @@ public class AddNGOActivity extends AppCompatActivity {
         contact_details = findViewById(R.id.contact_et);
         add_btn = findViewById(R.id.add_ngo_btn);
         img_link = findViewById(R.id.img_link_et);
+        upi_id = findViewById(R.id.upi_id);
         //initialising views
         progressDialog.setVisibility(View.GONE);
 
@@ -69,7 +70,7 @@ public class AddNGOActivity extends AppCompatActivity {
                                 if(progressDialog.getVisibility()==View.VISIBLE) {
                                     DatabaseReference ngoref = root.child("ngo");
                                     DatabaseReference ds = ngoref.push();
-                                    ds.setValue(new NGOModel(ngo_name.getText().toString(), ngo_location.getText().toString(), img_link.getText().toString(), ngo_desc.getText().toString(), ngo_link.getText().toString(), contact_details.getText().toString(), ngo_date.getText().toString()));
+                                    ds.setValue(new NGOModel(ngo_name.getText().toString(), ngo_location.getText().toString(), img_link.getText().toString(), ngo_desc.getText().toString(), ngo_link.getText().toString(), contact_details.getText().toString(), ngo_date.getText().toString(), upi_id.getText().toString()));
                                     progressDialog.setVisibility(View.GONE);
                                     Toast.makeText(getApplicationContext(),"!!!NGO ADDED!!!",Toast.LENGTH_LONG).show();
                                 }

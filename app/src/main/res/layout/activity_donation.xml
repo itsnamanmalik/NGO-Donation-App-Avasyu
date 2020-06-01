@@ -44,7 +44,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
             android:background="@drawable/button_bg"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:id="@+id/pay_btn"/>
     </RelativeLayout>
 </LinearLayout>

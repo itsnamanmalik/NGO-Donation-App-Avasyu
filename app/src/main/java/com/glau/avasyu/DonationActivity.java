@@ -41,7 +41,7 @@ public class DonationActivity extends AppCompatActivity {
     EditText amount;
     TextView ngo_name;
     final int GOOGLE_PAY_REQUEST_CODE = 123;
-    final String merid="8077344267@paytm";
+    String merid;
     final String mername="Naman Malik";
     String name,final_amount;
     TextView refno, success_msg;
@@ -56,6 +56,7 @@ public class DonationActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         name=getIntent().getExtras().getString("pay_ngo");
+        merid=getIntent().getExtras().getString("upi");
 
         pay_btn = findViewById(R.id.pay_btn);
         amount = findViewById(R.id.amount);
@@ -91,7 +92,6 @@ public class DonationActivity extends AppCompatActivity {
 
     private void initiate_payment() {
         final_amount = amount.getText().toString();
-        String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
         if (TextUtils.isEmpty(amount.getText().toString().trim())){
             Toast.makeText(getApplicationContext()," Amount is invalid", Toast.LENGTH_SHORT).show();}
         else {
@@ -100,17 +100,13 @@ public class DonationActivity extends AppCompatActivity {
                     .authority("pay")
                     .appendQueryParameter("pa", merid)
                     .appendQueryParameter("pn", mername)
-//                                .appendQueryParameter("mc", "your-merchant-code")
-//                                .appendQueryParameter("tr", "your-transaction-ref-id")
                     .appendQueryParameter("tn", name)
                     .appendQueryParameter("am", final_amount)
                     .appendQueryParameter("cu", "INR")
-//                                .appendQueryParameter("url", "your-transaction-url")
                     .build();
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(uri);
             Intent chooser = Intent.createChooser(intent, "Pay with");
-// check if intent resolves
             if (null != chooser.resolveActivity(getPackageManager())) {
                 DonationActivity.this.startActivityForResult(chooser, GOOGLE_PAY_REQUEST_CODE);
             } else {
