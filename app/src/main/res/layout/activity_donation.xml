@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonationActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:id="@+id/payment_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="NGO KA NAAM"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/payment_ngo_name"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DONATE"
+            android:elevation="10dp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/button_bg"
+            android:textSize="25sp"
+            android:id="@+id/pay_btn"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="done.json"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        android:id="@+id/success"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp"
+        android:elevation="5dp"
+        android:id="@+id/payment_card">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="₹ Enter"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="40sp"
+            android:id="@+id/amount"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/edit_text_bg"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹100 DONATED SUCCESSFULLY"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/refno"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:id="@+id/success_message"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ref No: 1234567890"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/black"
+    android:textSize="25sp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/refno"
+    android:textStyle="bold"
+    android:visibility="gone"/>
+</RelativeLayout>
